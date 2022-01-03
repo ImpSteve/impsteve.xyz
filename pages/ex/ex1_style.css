@@ -1,0 +1,17 @@
+h1{
+  color: #ff0000;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+p{
+  color: green;
+  text-transform: capitalize;
+  text-indent: 50px;
+  line-height: 30px;
+}
+
+a{
+  text-decoration: none;
+}
