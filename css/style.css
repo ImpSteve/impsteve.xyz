@@ -7,7 +7,7 @@
 :root{
 	--primary-color: #141417;
 	--secondary-color: #f6f6f6;
-	--link-hover-color: #a5f180;
+	--accent-color: #a5f180;
 }
 
 .light-mode{
@@ -33,7 +33,7 @@ header h2{
 }
 
 header span{
-	color: var(--link-hover-color);
+	color: var(--accent-color);
 }
 
 nav{
@@ -63,7 +63,7 @@ nav ul li a{
 
 nav ul li a:hover{
 	text-decoration: none;
-	color: var(--link-hover-color);
+	color: var(--accent-color);
 }
 
 main{
@@ -80,6 +80,12 @@ main ul li{
 
 a{
 	text-decoration: none;
+	color: var(--secondary-color);
+}
+
+a:hover{
+	text-decoration: none;
+	color: var(--accent-color);
 }
 
 footer{
@@ -95,5 +101,5 @@ footer a{
 
 footer a:hover{
 	text-decoration: none;
-	color: var(--link-hover-color);
+	color: var(--accent-color);
 }
