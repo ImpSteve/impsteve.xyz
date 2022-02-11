@@ -5,39 +5,58 @@
 }
 
 :root{
-	--primary-color: #141417;
-	--secondary-color: #f6f6f6;
-	--accent-color: #a5f180;
+	--primary-color: #141021;
+	--secondary-color: #fefeff;
+	--accent-color: #32e669;
 }
 
 .light-mode{
-	--primary-color: #f6f6f6;
-	--secondary-color: #141417;
+	--primary-color: #fefeff;
+	--secondary-color: #141021;
+}
+
+body{
+	width: 100%;
+	background: #07050d;
+	color: var(--secondary-color);
 }
 
 .content{
+	width: 1200px;
 	min-height: 100vh;
-	width: 100%;
-	padding-left: 4%;
-	padding-right: 4%;
+	margin: auto;
+	border-radius: 10px;
 	background: var(--primary-color);
-	color: var(--secondary-color);
-	box-sizing:border-box;
-	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
 }
 
-header h2{
-	width:30%;
-	padding-top: 2%;
-	float: left;
+span{
+	color: var(--accent-color)
 }
 
-header span{
-	color: var(--accent-color);
+.withnav{
+	display: flex;
+	align-items: center;
+	border-radius: 10px;
+	background: #4a5560;
+	padding: 10px;
+}
+
+#logo{
+	width: 15%;
+	cursor: pointer;
+	margin: 5px 0;
+}
+
+#menu-icon{
+	width: 12%;
+	cursor: pointer;
+	display: none;
 }
 
 nav{
-	width: 70%;
+	width: 85%;
 	margin: auto;
 	padding: 20px 0;
 	display: flex;
@@ -45,7 +64,7 @@ nav{
 	justify-content: space-between;
 }
 
-header nav ul{
+nav ul{
 	flex: 1;
 	text-align: right;
 }
@@ -53,7 +72,7 @@ header nav ul{
 nav ul li{
 	display: inline-block;
 	list-style: none;
-	margin: 10px 20px;
+	margin: 17px 20px;
 }
 
 nav ul li a{
@@ -66,40 +85,48 @@ nav ul li a:hover{
 	color: var(--accent-color);
 }
 
-main{
-	padding-left: 4%;
-	margin: auto;
-	float: left;
-}
 
-main ul li{
-	color: #867be0;
-	text-decoration: none;
-	list-style: none;
-}
 
-a{
-	text-decoration: none;
-	color: var(--secondary-color);
-}
 
-a:hover{
-	text-decoration: none;
-	color: var(--accent-color);
-}
 
-footer{
-	width: 100%;
-	padding-top: 4%;
-	clear: both;
-}
-
-footer a{
-	text-decoration: none;
-	color: var(--secondary-color);
-}
-
-footer a:hover{
-	text-decoration: none;
-	color: var(--accent-color);
+@media only screen and (max-width: 700px){
+	
+	.content{
+		width: 100%;
+	}
+	
+	nav{
+		width: 60%
+	}
+	
+	nav ul{
+		width: 100%;
+		background: linear-gradient(#4a5560, #5d306f);
+		position: absolute;
+		top: 75px;
+		right: 0px;
+		z-index: 2;	
+	}
+	
+	nav ul li{
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	
+	#logo{
+		width: 65%;
+		padding-left: 10px
+	}
+	
+	#menu-icon{
+		width: 30%;	
+		cursor: pointer;
+		display: block;
+	}
+	
+	#menuList{
+		overflow: hidden;
+		transition: 0.5s;
+	}
 }
