@@ -2,7 +2,7 @@
 <html>	
 	<head>
 		<title>ImpSteve's website</title>
-		<meta charset="UTF-8"/>
+		<meta charset="UTF-8">
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -12,19 +12,17 @@
 	</head>
 	<body>
 		<div class="content">
-			<header>
-				<h2>
-					ImpSteve: <span>Home Page</span>
-				</h2>
+			<header class="withnav">
+				<img src="./logo.png" id="logo">
 				<nav>
-					<ul>
-						<li>[<a href="https://impsteve.github.io/impsteve.xyz/">Home</a>]</li>
-						<li>[<a href=""><!--- ./pages/about.html --->About</a>]</li>
-						<li>[<a href="./pages/social.html"><!--- ./pages/social.html --->Social Media</a>]</li>
+					<ul id="menuList">
+						<li>[<a href="./index.html">Home</a>]</li>
 						<li>[<a href=""><!--- ./pages/projects --->Projects</a>]</li>
 						<li>[<a href=""><!--- ./pages/contact.html --->Contact</a>]</li>
 					</ul>
 				</nav>
+				<img src="./menu_open.png" id="menu-icon" 
+				onclick="toggle-menu()">
 			</header>
 			<main>
 				Hi. I am Jakub, aka Imp or ImpSteve. I am 18 years old guy. 
@@ -32,8 +30,30 @@
 				I am constantly looking for something that will interest me for a long time, amuse me or cheer me up in my boring and sad life.
 			</main>
 			<footer>
-				© Copyright [<a href="https://twitter.com/Jakub_ImpSteve"  target="_blank">ImpSteve</a>] 2022
+				<p>© Copyright [<a href="https://twitter.com/Jakub_ImpSteve"  target="_blank">ImpSteve</a>] 2022</p>
 			</footer>
 		</div>
+		
+		<script>
+		
+			var menuList = document.getElementById("menuList");
+			
+			menuList.style.maxHeight = "0px"
+			
+			function toggle-menu(){
+				
+				if( menu-list.style.maxHeight == "0px" )
+					{
+						menuList.style.maxHeight = "130px"
+					}
+				else
+					{
+						menuList.style.maxHeight = "0px"
+					}
+					
+			}
+		
+		</script>
+		
 	</body>
 </html>
